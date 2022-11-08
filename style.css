@@ -1,0 +1,89 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    background-color: #F0E1DE;
+    font-family: 'Ubuntu', sans-serif;  
+}
+header{ 
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    background-color: #FAE8E0;
+    margin: 2em;
+    padding: 2em;
+
+}
+header form{
+    display: flex;
+    flex-direction: row;
+    align-self: center;
+}
+header h1{
+    font-size: 3em;
+    color: #4C5270;
+    margin-bottom: 3em;
+}
+header input{
+    padding: 1em 8em 1em 1em;
+    font-family: 'Ubuntu', sans-serif;
+    text-align: start;
+    background-color: #83BDC0;
+    border-top-left-radius: 0.8em;
+    border-bottom-left-radius: 0.8em;
+}
+input::placeholder{
+    color: #4C5270;
+}
+input:focus {
+    color: black;
+    outline: none !important;
+    border: none;
+}
+header button{
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 1.5em;
+    text-transform: uppercase;
+    background-color: #4C5270;
+    color: #FAE8E0;
+    padding: 0.7em 1em;
+    border-top-right-radius: 0.8em;
+    border-bottom-right-radius: 0.8em;
+    border: 1px solid transparent;
+}
+.tasks{
+    display: flex;
+    flex-direction: row;
+    /* align-items: space-between; */
+    padding: 2em;
+    margin: 2em;
+    background-color: #4C5270;
+}
+.tasks li {
+    list-style-type: none;
+}
+
+.tasks input[type="text"] {
+    background-color: #F0E1DE;
+    border: none;
+    padding: 0.24em 0em;
+    margin: 0;
+    border: 1px solid transparent;
+    font-size: 1.5em;
+    text-align: start; 
+    border-top-left-radius: 0.5em;
+    border-bottom-left-radius: 0.5em;
+}
+.tasks button{
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 1.2em;
+    text-transform: uppercase;
+    background-color: #83BDC0;
+    color: #FAE8E0;
+    border: 1px solid transparent;
+    padding: 0.5em;
+}
+.tasks .delete{
+    border-top-right-radius: 0.5em;
+    border-bottom-right-radius: 0.5em;
+}
