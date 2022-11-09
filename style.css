@@ -2,8 +2,14 @@
     box-sizing: border-box;
 }
 body{
+    display: flex;
+    flex-direction: column;
     background-color: #F0E1DE;
     font-family: 'Ubuntu', sans-serif;  
+}
+button:hover{
+    cursor: pointer;
+    opacity: 0.8;
 }
 header{ 
     text-align: center;
@@ -12,6 +18,7 @@ header{
     background-color: #FAE8E0;
     margin: 2em;
     padding: 2em;
+    border-radius: 1em;
 
 }
 header form{
@@ -25,15 +32,19 @@ header h1{
     margin-bottom: 3em;
 }
 header input{
+    width: 30em;
     padding: 1em 8em 1em 1em;
     font-family: 'Ubuntu', sans-serif;
     text-align: start;
     background-color: #83BDC0;
     border-top-left-radius: 0.8em;
     border-bottom-left-radius: 0.8em;
+    border: 1px solid transparent;
 }
 input::placeholder{
     color: #4C5270;
+    font-size: 1.3em;
+    font-weight: 900;
 }
 input:focus {
     color: black;
@@ -53,17 +64,34 @@ header button{
 }
 .tasks{
     display: flex;
-    flex-direction: row;
-    /* align-items: space-between; */
+    flex-direction: column;
+    justify-content: space-between;
     padding: 2em;
     margin: 2em;
     background-color: #4C5270;
+    border-radius: 1em;
+}
+.tasks h3{
+    color: #FAE8E0;
+    font-size: 1.4em;
+    margin: 1em;
 }
 .tasks li {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 1em;
     list-style-type: none;
+}
+.tasks .buttons{
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
 }
 
 .tasks input[type="text"] {
+    color: #4C5270;
+    width: 20em;
     background-color: #F0E1DE;
     border: none;
     padding: 0.24em 0em;
