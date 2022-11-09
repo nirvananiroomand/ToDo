@@ -13,30 +13,45 @@
 <body>
     <header>
         <h1>Make Your Own To Do List!</h1>
-        <form action="">
-            <input type="text" placeholder="What are you up to?">
-            <button>Submit</button>
+        <form class="new_form" action="">
+            <input class="new_task" type="text" placeholder="What are you up to?">
+            <input 
+                type="submit" 
+                value="Add Task"
+            />
         </form>
     </header>
 
     <div class="tasks">
         <h3>Tasks:</h3>
-        <li>
-            <input type="text" readonly>
-            <div class="buttons">
+
+        <!-- <div class="task">
+            <input
+                class="content"
+                type="text"
+                value="Task1"
+                readonly
+            />
+            <div class="actions">
                 <button class="edit">EDIT</button>
                 <button class="delete">DELETE</button>
             </div>
-        </li>
-        <li>
-            <input type="text" readonly>
-            <div class="buttons">
+        </div>
+        
+        <div class="task">
+            <input
+                class="content"
+                type="text"
+                value="Task2"
+                readonly
+            />
+            <div class="actions">
                 <button class="edit">EDIT</button>
                 <button class="delete">DELETE</button>
             </div>
-        </li>
+        </div> -->
     </div>
 
-    <script src="./todo.js"></script>
+    <script src="./todo.js" type="text/javascript" lang="javascript"></script>
 </body>
 </html>
