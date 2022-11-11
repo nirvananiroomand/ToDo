@@ -19,13 +19,16 @@ window.addEventListener('load', () => {
 
 
 
-
+            const task_check_el = document.createElement("input");
+            task_check_el.classList.add("checkbox");
+            task_check_el.type = "checkbox";
             const task_input_el = document.createElement("input");
             task_input_el.classList.add("content");
             task_input_el.type = "text";
             task_input_el.value = task;
             task_input_el.setAttribute("readonly", "readonly");
-
+            
+            task_el.appendChild(task_check_el);
             task_el.appendChild(task_input_el);
 
             
@@ -71,6 +74,20 @@ window.addEventListener('load', () => {
             task_delete_el.addEventListener('click', () =>{
                 tasks.removeChild(task_el);
             })
+
+            let checkbox = task_check_el;
+            checkbox.addEventListener( "change", () => {
+                if(checkbox.checked){
+                    task_input_el.classList.replace("content", "checked_content");
+                    task_edit_el.classList.replace("edit", "disabled_edit");
+                    task_edit_el.disabled = true;
+                }
+                else{
+                    task_input_el.classList.replace("checked_content", "content");
+                    task_edit_el.classList.replace("disabled_edit", "edit");
+                    task_edit_el.disabled = false;
+                }
+            });
         }
     })
 })

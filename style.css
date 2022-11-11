@@ -7,7 +7,7 @@ body{
     background-color: #F0E1DE;
     font-family: 'Ubuntu', sans-serif;  
 }
-button:hover{
+button:hover:not(.disabled_edit){
     cursor: pointer;
     opacity: 0.8;
 }
@@ -86,6 +86,22 @@ header input[type="submit"]:hover{
     justify-content: center;
     margin: 1em;
 }
+.tasks .task input[type= "checkbox"]{
+    cursor: pointer;
+    background-color: #83BDC0;
+    place-self: center;
+    width: 3em;
+    height: 3em;
+    appearance: none;
+    outline: 2px solid #F0E1DE;
+    border-radius: 0.8em;
+    margin-right: 1em;
+}
+.tasks .task input[type='checkbox']:checked:after {
+    content: '✔';
+    color: #4C5270;
+    font-size: 2.5em;
+}
 .tasks .actions{
     display: flex;
     flex-direction: row;
@@ -112,7 +128,16 @@ header input[type="submit"]:hover{
     font-weight: 600;
     padding-left: 1em;
 }
-.tasks button{
+.tasks .task .checked_content{
+    cursor: default;
+    flex: 1 1 0%;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 400;
+    padding-left: 1em;
+    text-decoration: line-through;
+    color: #4c5270ae;
+}
+.tasks button:not(.disabled_edit){
     font-family: 'Ubuntu', sans-serif;
     font-size: 1.2em;
     text-transform: uppercase;
@@ -124,4 +149,13 @@ header input[type="submit"]:hover{
 .tasks .delete{
     border-top-right-radius: 0.5em;
     border-bottom-right-radius: 0.5em;
+}
+.tasks .disabled_edit{
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 1.2em;
+    text-transform: uppercase;
+    background-color: #83bdc0a0;
+    color: #fae8e0a0;
+    border: 1px solid transparent;
+    padding: 0.5em;
 }
